@@ -7,6 +7,7 @@ import org.apache.spark.sql.SparkSession
 object SparkApplication {
 
   def main(args: Array[String]): Unit = {
+    println(s"module common: ${Constants.commonVersion}")
     println(s"module spark247s211: ${ScalaVersion.line}")
 
     val address =
