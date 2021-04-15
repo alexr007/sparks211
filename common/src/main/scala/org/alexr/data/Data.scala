@@ -13,7 +13,7 @@ object Data {
     (n, s"<$n>", n.toDouble * 10.1)
   }
   val people = (1 to size).map { n =>
-    Person(n, randomName(), n * math.random * 1000)
+    Person(n, randomName(), math.random * 1000)
   }.toVector
 
 }
