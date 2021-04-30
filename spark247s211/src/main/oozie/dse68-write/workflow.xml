@@ -1,0 +1,24 @@
+<workflow-app xmlns="uri:oozie:workflow:0.5" name="aaa13">
+
+    <start to="aaa13" />
+
+    <action name="aaa13">
+        <spark xmlns="uri:oozie:spark-action:0.1">
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <master>${master}</master>
+            <name>aaa13</name>
+            <class>org.alexr.SparkLocalWriteDSE68ocs</class>
+            <jar>/apps/ocs/dse68-write/lib/spark247s211-assembly-0.0.3.jar</jar>
+        </spark>
+        <ok to="end" />
+        <error to="fail" />
+    </action>
+
+    <kill name="fail">
+        <message>Workflow failed, error
+            message[${wf:errorMessage(wf:lastErrorNode())}]
+        </message>
+    </kill>
+    <end name='end' />
+</workflow-app>

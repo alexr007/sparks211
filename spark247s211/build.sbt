@@ -7,6 +7,8 @@ version := "0.0.3"
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion % Provided,
   "org.apache.spark" %% "spark-sql"  % sparkVersion % Provided,
+//  "org.apache.spark" %% "spark-core" % sparkVersion,
+//  "org.apache.spark" %% "spark-sql"  % sparkVersion,
   "com.datastax.spark" %% "spark-cassandra-connector" % "2.5.0",
 )
 
